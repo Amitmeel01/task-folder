@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show all listings</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <h1 class="heading">All Details here:</h1>
+
+    <div class="all1">
+
+    <div class="all">
+      <% for(let list of alllist) { %>
+
+      <div class="card">
+        <ul>
+          <li><b>Name:</b> <%= list.Name %></li>
+          <li><b>Age:</b><%= list.Age%></li>
+          <li><b>Gender:</b> <%=list.Gender%></li>
+          <li><b>Mobile:</b> <%=list.Mobile%></li>
+        </ul>
+
+        <div class="btns">
+            
+          <form action="/home/<%= list._id %>?_method=DELETE" method="post">
+        <button type="submit">Delete</button>
+      </form>
+
+      <!-- <form action="/home/" method="post">
+        <button type="submit">Edit Details</button>
+      </form> -->
+  
+      <a href="/home/<%=list._id%>/edit" class="btn btn-dark">Edit Details</a>
+
+        </div>
+        
+      </div>
+
+
+
+      <% } %>
+
+    </div>
+
+    <div>
+      <a href="http://localhost:8080/new">
+        <button class="btn">Create New Detail</button>
+      </a>
+    </div>
+   
+
+  </div>
+  </body>
+</html>

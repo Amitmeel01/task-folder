@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Details</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <h1 class="heading">Edit Details</h1>
+
+  <form action="/home/<%=list._id%>?_method=PUT" method="post">
+
+
+      <div class="card1">
+
+     
+      
+    <div class="num">
+      <label for="Name">Name</label>
+      <input type="text" placeholder="Enter your name" id="Name" name="list[Name]" value="<%=list.Name%>">
+    </div>
+  
+    <div class="num">
+      <label for="Age">Age</label>
+      <input type="number" placeholder="Enter your age" id="Age"  name="list[Age]" value="<%=list.Age%>">
+    </div>
+  
+    <div class="num">
+      <label for="Gender">Gender:</label>
+    
+      <input type="text" placeholder="Enter your gender" id="Gender"  name="list[Gender]" value="<%=list.Gender%>">
+    </div>
+  
+    <div class="num">
+      <label for="Mobile">Mobile Number</label>
+      <input type="number" placeholder="Enter your Number" id="Mobile" name="list[Mobile]" value="<%=list.Mobile%>">
+    </div>
+  
+    <button class="btn1" type="submit">Edit</button>
+
+  </div>
+     
+
+  </form>
+
+
+  
+</body>
+</html>
